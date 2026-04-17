@@ -3,18 +3,25 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('profil');
+    return view('index');
 });
 
-
-Route::get('/profil', function () {
-    return view('profil');
+Route::get('/detail', function () {
+    return view('event_detail');
 });
 
-Route::get('/katalog', function () {
-    return view('katalog');
+Route::get('/checkout', function () {
+    return view('checkout');
 });
 
-Route::get('/bantuan', function () {
-    return view('bantuan');
+Route::get('/admin', function () {
+    return view('admin.dashboard');
+});
+
+Route::get('/adminkelola', function () {
+    return view('admin.event');
+});
+
+Route::get('/adminlaporan', function () {
+    return view('admin.transaction');
 });
